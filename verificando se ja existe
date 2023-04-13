@@ -20,3 +20,4 @@ if resultado:
 
 else:
     print('O banco de dados ainda não existe')
+    cursor.execute('CREATE DATABASE meubancodedados')
