@@ -1,0 +1,22 @@
+import mysql.connector
+
+meubd = mysql.connector.connect(
+    host='localhost',
+    user='root',
+    password='lucas1303',
+    database='bancodedados'
+)
+
+
+# verificar se ja existe um banco de dados
+
+cursor = meubd.cursor()
+cursor.execute('SHOW DATABASES LIKE "meubancodedados"')
+
+resultado = cursor.fetchone()
+
+if resultado:
+    print('O banco de dados ja existe')
+
+else:
+    print('O banco de dados ainda não existe')
