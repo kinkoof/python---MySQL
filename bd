@@ -1,0 +1,14 @@
+import mysql.connector
+
+meubd = mysql.connector.connect(
+    host='localhost',
+    user='root',
+    password='lucas1303',
+    database='bancodedados'
+)
+
+
+# criar novo banco de dados
+
+cursor = meubd.cursor()
+cursor.execute('CREATE DATABASE meubancodedados')
